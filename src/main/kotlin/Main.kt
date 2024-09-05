@@ -14,6 +14,6 @@ private fun getAccessToken(path:String): String{
 }
 
 fun main(){
-    println("[${getAccessToken("ikatech-4d439-firebase-adminsdk-fkequ-7120d01ef0.json")}]")
+    println("[${getAccessToken("ikatech.json")}]")
 }
 
