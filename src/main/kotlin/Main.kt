@@ -9,11 +9,11 @@ private fun getAccessToken(path:String): String{
         .fromStream(FileInputStream(serviceAccountPath))
         .createScoped(listOf("https://www.googleapis.com/auth/firebase.messaging"))
     googleCredentials.refresh()
+    println("[${googleCredentials.accessToken.expirationTime}]")
     return googleCredentials.accessToken.tokenValue
 
 }
 
 fun main(){
-    println("[${getAccessToken("ikatech.json")}]")
+    println("[${getAccessToken("mok.json")}]")
 }
-
